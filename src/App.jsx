@@ -20,8 +20,7 @@ function ModeToggle() {
   )
 }
 
-function App() {
-  
+function App() { 
   return (
     <>
       <ModeToggle />
