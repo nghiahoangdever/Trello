@@ -4,10 +4,28 @@ import ThreeDRotation from '@mui/icons-material/ThreeDRotation'
 import HomeIcon from '@mui/icons-material/Home'
 import { pink } from '@mui/material/colors'
 import Typography from '@mui/material/Typography'
-function App() {
 
+import {useColorScheme} from '@mui/material/styles'
+
+function ModeToggle() {
+  const { mode, setMode } = useColorScheme(); // useColorScheme là một hook trong MUI giúp lấy thông tin về chế độ màu hiện tại (sáng/tối) và cho phép thay đổi chế độ màu.
+  return (
+    <Button
+      onClick={() => {
+        setMode(mode === 'light' ? 'dark' : 'light')
+      }}
+    >
+      {mode === 'light' ? 'Turn dark' : 'Turn light'}
+    </Button>
+  )
+}
+
+function App() {
+  
   return (
     <>
+      <ModeToggle />
+      <hr />
       <div>NghiaHoang</div>
       
       <Typography variant='body2' color="text.secondary">Test Typography</Typography>
