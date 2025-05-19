@@ -4,7 +4,7 @@ import ThreeDRotation from '@mui/icons-material/ThreeDRotation'
 import HomeIcon from '@mui/icons-material/Home'
 import { pink } from '@mui/material/colors'
 import Typography from '@mui/material/Typography'
-import {useColorScheme} from '@mui/material/styles'
+import useColorScheme from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import InputLabel from '@mui/material/InputLabel'
 import MenuItem from '@mui/material/MenuItem'
@@ -23,7 +23,6 @@ function Modeselect() {
     setMode(selectedMode)
     // setAge(event.target.value)
   }
-
   return (
     <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
       <InputLabel id="label-select-dark-light-mode">Mode</InputLabel>
@@ -35,7 +34,7 @@ function Modeselect() {
         onChange={handleChange}
       >
         <MenuItem value="light">
-          <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             <LightModeIcon fontSize='small' />Light
           </div>
         </MenuItem>
@@ -53,10 +52,9 @@ function Modeselect() {
     </FormControl>
   )
 }
-
 function ModeToggle() {
   const { mode, setMode } = useColorScheme() // useColorScheme là một hook trong MUI giúp lấy thông tin về chế độ màu hiện tại (sáng/tối) và cho phép thay đổi chế độ màu.
-  // const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)') 
+  // const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)')
   // const prefersLightMode = useMediaQuery('(prefers-color-scheme: light)')
   // console.log('prefersDarkMode', prefersDarkMode)
   // console.log('prefersLightMode', prefersLightMode)
@@ -71,15 +69,14 @@ function ModeToggle() {
   )
 }
 
-function App() {  
+function App() {
   return (
     <>
       <Modeselect />
       <hr />
       <ModeToggle />
       <hr />
-      <div>NghiaHoang</div>
-      
+      <div>Nghĩa Hoàng</div>
       <Typography variant='body2' color="text.secondary">Test Typography</Typography>
 
       <Button variant="text">Text</Button>
@@ -99,3 +96,5 @@ function App() {
 }
 
 export default App
+
+
