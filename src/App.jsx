@@ -4,8 +4,7 @@ import ThreeDRotation from '@mui/icons-material/ThreeDRotation'
 import HomeIcon from '@mui/icons-material/Home'
 import { pink } from '@mui/material/colors'
 import Typography from '@mui/material/Typography'
-import {useColorScheme} from '@mui/material/styles'
-import useMediaQuery from '@mui/material/useMediaQuery'
+import { useColorScheme } from '@mui/material/styles'
 import InputLabel from '@mui/material/InputLabel'
 import MenuItem from '@mui/material/MenuItem'
 import FormControl from '@mui/material/FormControl'
@@ -56,7 +55,7 @@ function Modeselect() {
 
 function ModeToggle() {
   const { mode, setMode } = useColorScheme() // useColorScheme là một hook trong MUI giúp lấy thông tin về chế độ màu hiện tại (sáng/tối) và cho phép thay đổi chế độ màu.
-  // const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)') 
+  // const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)')
   // const prefersLightMode = useMediaQuery('(prefers-color-scheme: light)')
   // console.log('prefersDarkMode', prefersDarkMode)
   // console.log('prefersLightMode', prefersLightMode)
@@ -71,7 +70,7 @@ function ModeToggle() {
   )
 }
 
-function App() {  
+function App() {
   return (
     <>
       <Modeselect />
@@ -79,7 +78,6 @@ function App() {
       <ModeToggle />
       <hr />
       <div>NghiaHoang</div>
-      
       <Typography variant='body2' color="text.secondary">Test Typography</Typography>
 
       <Button variant="text">Text</Button>
